@@ -1,0 +1,50 @@
+"Records" : [
+            {
+              "eventVersion" : "2.0",
+              "eventSource" : "minio:s3",
+              "awsRegion" : "",
+              "eventTime" : "2023-05-27T15:15:52.261Z",
+              "eventName" : "s3:ObjectAccessed:Get",
+              "userIdentity" : {
+                "principalId" : "minio"
+              },
+              "requestParameters" : {
+                "principalId" : "minio",
+                "region" : "",
+                "sourceIPAddress" : "127.0.0.1"
+              },
+              "responseElements" : {
+                "content-length" : "6094",
+                "x-amz-id-2" : "dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8",
+                "x-amz-request-id" : "176308F944B0C211",
+                "x-minio-deployment-id" : "6c93b610-7268-4aed-9f66-3de618d6f692",
+                "x-minio-origin-endpoint" : "http://172.21.0.4:9000"
+              },
+              "s3" : {
+                "s3SchemaVersion" : "1.0",
+                "configurationId" : "Config",
+                "bucket" : {
+                  "name" : "hello-bucket-world",
+                  "ownerIdentity" : {
+                    "principalId" : "minio"
+                  },
+                  "arn" : "arn:aws:s3:::hello-bucket-world"
+                },
+                "object" : {
+                  "key" : "_%ED%99%95%EC%9D%B8_%EC%9A%94%EC%B2%AD.png",
+                  "size" : 6094,
+                  "eTag" : "ab5dcbd015cc14879d8cee5e99d24016",
+                  "contentType" : "image/png",
+                  "userMetadata" : {
+                    "content-type" : "image/png"
+                  },
+                  "sequencer" : "176308F944DB6FD9"
+                }
+              },
+              "source" : {
+                "host" : "127.0.0.1",
+                "port" : "",
+                "userAgent" : "MinIO (linux; arm64) minio-go/v7.0.52 MinIO Console/(dev)"
+              }
+            }
+          ]
