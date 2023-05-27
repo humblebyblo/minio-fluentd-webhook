@@ -6,7 +6,7 @@ RUN apk --no-cache --update add \
     build-base \
     ruby-dev
 
-RUN gem install elasticsearch -v 7.6
+RUN gem install elasticsearch -v 7.0.0
 RUN gem install fluent-plugin-elasticsearch 
 
 USER fluent
