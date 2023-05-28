@@ -17,13 +17,6 @@ services:
       - 9000:9000
       - 9001:9001
 
-  fluentd:
-    build: ./fluentd
-    volumes:
-      - ./fluentd/conf:/fluentd/etc
-    ports:
-      - 9880:9880
-
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.13.1
     environment:
@@ -34,6 +27,16 @@ services:
       - esdata:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
+
+  fluentd:
+    build: ./fluentd
+    volumes:
+      - ./fluentd/conf:/fluentd/etc
+    ports:
+      - 9880:9880
+    depends_on:
+      - elasticsearch
+      - minio
 
 volumes:
   minio_data:
