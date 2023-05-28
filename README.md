@@ -11,4 +11,4 @@ elasticsearch
 
 fluentd gem
 - elasticsearch (client) : v7.0.0 https://rubygems.org/gems/elasticsearch/versions
-- fluent-plugin-elasticsearch : latest 
+- fluent-plugin-elasticsearch : latest https://docs.fluentd.org/output/elasticsearch
