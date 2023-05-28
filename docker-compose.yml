@@ -32,6 +32,7 @@ services:
     build: ./fluentd
     volumes:
       - ./fluentd/conf:/fluentd/etc
+      - ./fluentd-mounted:/host_dir/
     ports:
       - 9880:9880
     depends_on:
