@@ -8,10 +8,10 @@ services:
     environment:
       MINIO_ROOT_USER: minio
       MINIO_ROOT_PASSWORD: minio123
-      MINIO_AUDIT_WEBHOOK_ENABLE_DRZ: "on"
-      MINIO_AUDIT_WEBHOOK_ENDPOINT_DRZ: http://fluentd:9880/minio/audit/log
-      MINIO_LOGGER_WEBHOOK_ENABLE_DRZ: "on"
-      MINIO_LOGGER_WEBHOOK_ENDPOINT_DRZ: http://fluentd:9880/minio/server/log
+      MINIO_AUDIT_WEBHOOK_ENABLE_MYESNAME: "on"
+      MINIO_AUDIT_WEBHOOK_ENDPOINT_MYESNAME: http://fluentd:9880/minio/audit/log
+      MINIO_LOGGER_WEBHOOK_ENABLE_MYESNAME: "on"
+      MINIO_LOGGER_WEBHOOK_ENDPOINT_MYESNAME: http://fluentd:9880/minio/server/log
     command: server /data --console-address ":9001"
     ports:
       - 9000:9000
