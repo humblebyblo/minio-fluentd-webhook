@@ -8,3 +8,7 @@ support
 
 elasticsearch
 - version 7.x
+
+fluentd gem
+- elasticsearch (client) : v7.0.0 https://rubygems.org/gems/elasticsearch/versions
+- fluent-plugin-elasticsearch : latest 
