@@ -5,6 +5,7 @@ curl -X PUT "http://localhost:9200/minio_audit_log" -H 'Content-Type: applicatio
     "properties": {
       "version": { "type": "keyword" },
       "deploymentid": { "type": "keyword" },
+      "time": { "type": "date" },
       "event": { "type": "keyword" },
       "trigger": { "type": "keyword" },
       "api": {
@@ -31,8 +32,13 @@ curl -X PUT "http://localhost:9200/minio_audit_log" -H 'Content-Type: applicatio
       "requestQuery": { "type": "object", "enabled": false },
       "requestHeader": { "type": "object" },
       "responseHeader": { "type": "object" },
-      "tags": { "type": "object" },
+      "tags": {
+        "properties": {
+          "objectErasureMap": { "type": "object", "enabled": true }
+        }
+      },
       "accessKey": { "type": "keyword" }
     }
   }
 }'
+
